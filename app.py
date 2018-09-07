@@ -13,8 +13,8 @@ def post():
     print("Is Request JSON:", request.is_json)
     print("Request:", request)
     content = request.get_json()
-    print("The data from request:" , content['text'])
-    print("What is return from mecab:" , butler.ask_mecab(content['text']))
-    return butler.ask_mecab(content['text'])
+    #print("The data from request:" , content['text'])
+    mecab_result = butler.ask_mecab(content['text'])
+    return butler.ask_edict_to_json(mecab_result)
 
 app.run(host='0.0.0.0', port=19999)
