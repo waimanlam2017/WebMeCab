@@ -1,4 +1,4 @@
-from src.nlp.mecab_wrapper import PosTagger
+from src.nlp.mecab import MeCabWrapper
 from src.nlp.edict import EdictWrapper
 import json
 
